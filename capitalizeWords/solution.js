@@ -8,7 +8,13 @@ fs.readFileSync(filename).toString().split('\n').forEach(function (line) {
 });
 
 function solution(line){
-  // Put your solution code here
-  // Each line represents 1 test case provided by CodeEval
-  return line;
+
+  var split = line.split(' ');
+  split = split.map(function(v) {
+    var t = v.split('');
+    t[0] = t[0].toUpperCase();
+    return t.join('');
+  });
+
+  return split.join(' ');
 }
